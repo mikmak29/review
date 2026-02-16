@@ -4,6 +4,7 @@ const displayMessage = document.getElementById("displayMessage");
 
 const path = "/rate";
 const submitReviewHandler = async (event) => {
+  console.log("updated");
   event.preventDefault();
   const userMessage = reviewMessage.value.trim();
 
@@ -42,4 +43,4 @@ const submitReviewHandler = async (event) => {
   reviewMessage.value = "";
 };
 
-submitButton?.addEventListener("submit", submitReviewHandler);
+submitButton?.addEventListener("click", submitReviewHandler);
