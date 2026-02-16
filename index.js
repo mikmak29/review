@@ -18,6 +18,7 @@ const submitReviewHandler = async (event) => {
 
   if (!response.ok) {
     console.error("Couldn't send the review");
+    alert("Couldn't send the review")
     return;
   }
 
@@ -27,6 +28,7 @@ const submitReviewHandler = async (event) => {
     const errorResponse = await fetch(`http://localhost:8000/api${path}`);
     // const data = await errorResponse.json();
     console.log(errorResponse);
+    alert(errorResponse.errorMessage)
 
     // displayMessage.textContent = errorResponse.errorMessage;
     // setTimeout(() => {
